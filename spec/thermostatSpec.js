@@ -20,4 +20,13 @@ describe("Thermostat", function(){
     thermostat.decreaseTemp(5);
     expect(thermostat.temperature).toEqual(15);
   });
+
+  it("should throw error if attempt to increase temperature above maximum", function(){
+    expect( function(){ thermostat.increaseTemp(13); } ).toThrow(new Error("Cannot raise temperature that high"));
+  });
+
+  it("should throw error if attempt to decrease temperature below minimum", function(){
+    expect( function(){ thermostat.decreaseTemp(11); } ).toThrow(new Error("Cannot lower temperature that much"))
+  });
+
 });
