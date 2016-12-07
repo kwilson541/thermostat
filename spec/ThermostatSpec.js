@@ -39,12 +39,16 @@ describe("Thermostat",function() {
     })
 
     describe("energy usage", function() {
+
       it("should return 'low usage' if the temperature is less than 18 degrees",  function() {
         for(count = 0; count < 5; count++) {
           thermostat.decreaseTemperature();
         }
         expect(thermostat.currentEnergyUsage()).toEqual("low-usage")
       })
+
+
+
     })
 
   describe("Power Saving Mode - OFF", function() {

@@ -34,5 +34,6 @@ Thermostat.prototype.currentEnergyUsage = function() {
   return "low-usage";
 }
 
+
 const defaultTemperature = 20;
 const minimumTemperature = 10;
