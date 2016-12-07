@@ -49,6 +49,15 @@ describe("Thermostat",function() {
       expect(thermostat.powerSavingMode).toEqual(true)
     })
 
+    it("toggle should turn powerSavingMode on when it is off", function() {
+      thermostat.togglePowerSavingMode();
+      for(count = 0; count < 10; count++) {
+        thermostat.increaseTemperature();
+      }
+      thermostat.togglePowerSavingMode();
+      expect(thermostat.temperature).toEqual(25)
+    })
+
     describe("energy usage", function() {
 
     beforeEach(function() {
