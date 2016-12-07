@@ -39,13 +39,31 @@ describe("Thermostat",function() {
     })
 
     describe("energy usage", function() {
+
+    beforeEach(function() {
+  		thermostat.powerSavingModeOff();
+  	});
+
       it("should return 'low usage' if the temperature is less than 18 degrees",  function() {
         for(count = 0; count < 5; count++) {
           thermostat.decreaseTemperature();
         }
         expect(thermostat.currentEnergyUsage()).toEqual("low-usage")
-      })
-    })
+      });
+
+      it("should return 'medium-usage' if the temperature is between 18-25 degrees", function() {
+      	expect(thermostat.currentEnergyUsage()).toEqual("medium-usage")
+      });
+
+      it("should return 'high-usage' if the temperature is above 25 degrees", function() {
+      	for(count = 0; count < 6; count++) {
+          thermostat.increaseTemperature();
+        }
+      	expect(thermostat.currentEnergyUsage()).toEqual("high-usage")
+      });
+
+    });
+
 
   describe("Power Saving Mode - OFF", function() {
 
