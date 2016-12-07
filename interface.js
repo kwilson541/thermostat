@@ -32,6 +32,7 @@ $ ( document ).ready(function() {
 	  	$('#power-saving-mode').text("OFF");
 	  }
     updateTemperature();
+    updateEnergyUsage();
   });
 
   function updateTemperature() {
