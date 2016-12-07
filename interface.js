@@ -9,7 +9,6 @@ $ ( document ).ready(function() {
   	thermostat.increaseTemperature();
   	updateTemperature();
     updateEnergyUsage();
-
   });
 
   $('#down').click(function() {
@@ -41,5 +40,6 @@ $ ( document ).ready(function() {
 
   function updateEnergyUsage() {
     $('#energy-usage').text(thermostat.currentEnergyUsage());
+    $('#energy-usage').attr('class', thermostat.currentEnergyUsage());
   }
 });

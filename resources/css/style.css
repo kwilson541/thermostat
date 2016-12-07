@@ -3,8 +3,8 @@ html {
 	padding: 20px;
 	font-family: Helvetica;
 	font-size: 40px;
-	height: 100%; 
-	overflow: hidden; 
+	height: 100%;
+	overflow: hidden;
 	background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #862077), color-stop(100%, #140027));
 }
 
@@ -55,3 +55,15 @@ button:active {
    border-top-color: #1b435e;
    background: #1b435e;
    }
+
+	 .low-usage {
+		 color: green;
+	 }
+
+	 .medium-usage {
+		 color: white;
+	 }
+
+	 .high-usage {
+		 color: red;
+	 }
