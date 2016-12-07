@@ -19,4 +19,18 @@ describe("Thermostat",function() {
   	expect(thermostat.temperature).toEqual(19);
   });
 
+  it("should have a minimum temperature of 10 degrees", function() {
+    for(count = 0; count < 11; count++) {
+      thermostat.decreaseTemperature();
+    }
+    expect(thermostat.temperature).toEqual(10)
+  })
+
+  it("should have a maximum temperature of 32 degrees", function() {
+    for(count = 0; count < 13; count++) {
+      thermostat.increaseTemperature();
+    }
+    expect(thermostat.temperature).toEqual(32)
+  });
+
 });
