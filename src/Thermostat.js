@@ -26,5 +26,13 @@ Thermostat.prototype.powerSavingModeOn = function() {
 	this.maximumTemperature = 25;
 }
 
+Thermostat.prototype.resetTemperature = function() {
+  this.temperature = 20;
+}
+
+Thermostat.prototype.currentEnergyUsage = function() {
+  return "low-usage";
+}
+
 const defaultTemperature = 20;
 const minimumTemperature = 10;

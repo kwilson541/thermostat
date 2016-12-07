@@ -30,6 +30,23 @@ describe("Thermostat",function() {
 	    expect(thermostat.temperature).toEqual(10)
 	  });
 
+    it("should reset to 20 degrees", function() {
+      for(count = 0; count < 11; count++) {
+        thermostat.decreaseTemperature();
+      }
+      thermostat.resetTemperature()
+      expect(thermostat.temperature).toEqual(20)
+    })
+
+    describe("energy usage", function() {
+      it("should return 'low usage' if the temperature is less than 18 degrees",  function() {
+        for(count = 0; count < 5; count++) {
+          thermostat.decreaseTemperature();
+        }
+        expect(thermostat.currentEnergyUsage()).toEqual("low-usage")
+      })
+    })
+
   describe("Power Saving Mode - OFF", function() {
 
   	beforeEach(function() {
