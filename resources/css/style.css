@@ -7,6 +7,14 @@ html {
   overflow: hidden;
 }
 
+.test {
+    width: 600px;
+    border: 10px solid white;
+    padding: 25px;
+    margin: 25px;
+    background-color: black;
+}
+
 input[type=text] {
     width: 100px;
     height: 55px;
