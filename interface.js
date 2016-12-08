@@ -23,7 +23,7 @@ $( document ).ready(function() {
     refresh();
   });
 
-  $("#table").fadeIn(3000);
+  $("#page").fadeIn(3000);
 
   function psmStatus() {
     if (thermostat.isInPowerSavingMode === true) {

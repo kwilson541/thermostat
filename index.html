@@ -1,43 +1,48 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" type="text/css" href="resources/css/style.css">
-    <script src="jquery.js"></script>
-    <script src="interface.js"></script>
-    <title>Thermostat</title>
-  </head>
-  <body>
-    <div id="table" style="display:none;">
-      <center>
-        Weather in your City:
-        <br>
-        <span id="current-temperature-outside"></span>
-        <br>
-        <span id="description"></span>
-        <form id="select-city">
-          <input id="current-city" type="text" placeholder="My City"></input>
-          <button type="submit">Submit</button>
-        </form>      
-      </center>
+	<head>
+		<link rel="stylesheet" type="text/css" href="resources/css/style.css">
+		<script src="jquery.js"></script>
+		<script src="interface.js"></script>
+		<script src='src/Thermostat.js'></script>
 
-      <table style="width:100%">
-        <tr>
-          <th>
-              Temperature: <span id='temperature' type='text'></span><br>
-              Energy Usage: <span id='energy-usage' type='text'></span><br>
-              Power Saving Mode: <span id='psm-status' type='text'></span>
-          </th>
+		<title>Thermostat</title>
+	</head>
 
-          <th>
-            <button id="temperature-up">☼</button>
-            <button id="temperature-down">❄</button><br><br>
-            <button id="temperature-reset">Reset</button><br><br>
-            <button id="powersavingmode">PSM</button>
-          </th>
-        </tr>
-      </table>
-    </div>
+	<body>
 
-    <script src='src/Thermostat.js'></script>
-  </body>
+		<div id="page" style="display:none;">
+
+			<center>
+				Weather in your City:
+				<br>
+				<span id="current-temperature-outside"></span>
+				<br>
+				<span id="description"></span>
+				<form id="select-city">
+					<input id="current-city" type="text" placeholder="My City"></input>
+					<button type="submit">Submit</button>
+				</form>      
+
+				<br>
+
+				<div class="display">
+					Temperature: <span id='temperature' type='text'></span>°C<br>
+					Energy Usage: <span id='energy-usage' type='text'></span><br>
+					Power Saving Mode: <span id='psm-status' type='text'></span>
+				</div>
+
+				<br>
+
+				<div class="controls">
+					<button id="temperature-up">▲</button>
+					<button id="temperature-down">▼</button>
+					<button id="temperature-reset">Reset</button>
+					<button id="powersavingmode">PSM</button>
+				</div>
+			</center>
+			
+		</div>
+
+	</body>
 </html>
