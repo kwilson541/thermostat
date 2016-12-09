@@ -19,7 +19,7 @@ input[type=text] {
     width: 100px;
     height: 55px;
     box-sizing: border-box;
-    border: 2px solid #ccc;
+    border: 2px solid black;
     border-radius: 4px;
     font-size: 16px;
     background-color: #3d89cc;
@@ -33,38 +33,6 @@ input[type=text] {
 input[type=text]:focus {
     width: 300px;
 }
-
-button {
-   border-top: 1px solid #96d1f8;
-   background: #3d89cc;
-   background: -webkit-gradient(linear, left top, left bottom, from(#679fcf), to(#3d89cc));
-   background: -webkit-linear-gradient(top, #679fcf, #3d89cc);
-   background: -moz-linear-gradient(top, #679fcf, #3d89cc);
-   background: -ms-linear-gradient(top, #679fcf, #3d89cc);
-   background: -o-linear-gradient(top, #679fcf, #3d89cc);
-   padding: 12.5px 25px;
-   -webkit-border-radius: 37px;
-   -moz-border-radius: 37px;
-   border-radius: 37px;
-   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
-   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
-   box-shadow: rgba(0,0,0,1) 0 1px 0;
-   text-shadow: rgba(0,0,0,.4) 0 1px 0;
-   color: white;
-   font-size: 24px;
-   font-family: Helvetica;
-   text-decoration: none;
-   vertical-align: middle;
-   }
-button:hover {
-   border-top-color: #c46a9a;
-   background: #c46a9a;
-   color: #ccc;
-   }
-button:active {
-   border-top-color: #1b435e;
-   background: #1b435e;
-   }
 
 .low-usage {
   color: green;
@@ -84,4 +52,66 @@ button:active {
 
 .Off {
   color: red;
+}
+
+.btn {
+  background: #3d89cc;
+  color: #fff;
+  box-shadow: 0 6px black;
+  -webkit-transition: none;
+  -moz-transition: none;
+  transition: none;
+  border-radius: 50%;
+  width: 90px;
+  height: 50px;
+  padding: 0;
+  border: none;
+  font-family: Helvetica;
+  font-size: 24px;
+  cursor: pointer;
+  display: inline-block;
+  margin: 15px 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+}
+
+.btn:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.btn1 {
+  border-radius: 40px;
+  width: 150px;
+}
+
+.btn1:hover {
+  box-shadow: 0 4px white;
+  top: 2px;
+}
+
+.btn1:active {
+  box-shadow: 0 0 white;
+  top: 6px;
+}
+
+.btn2 {
+  width: 50px;
+}
+
+.btn2:hover {
+  box-shadow: 0 4px white;
+  top: 2px;
+}
+
+.btn2:active {
+  box-shadow: 0 0 white;
+  top: 6px;
 }
