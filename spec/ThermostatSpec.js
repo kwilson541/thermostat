@@ -56,12 +56,22 @@ describe('Thermostat', function() {
 
   it('should have medium energy usage if temp is between 18 and 25', function() {
     expect(thermostat.currentEnergyUsage()).toEqual("medium-usage");
-  })
+  });
 
   it('should have high energy usage if temp is 25 or over', function() {
     thermostat.temperature = 26
     expect(thermostat.currentEnergyUsage()).toEqual("high-usage");
   });
+
+  it('should be able to change the temperature to a given value', function() {
+    thermostat.changeTemperature(17);
+    expect(thermostat.temperature).toEqual(17);
+  });
+
+  it('should be able to change power saving mode', function() {
+    thermostat.changePowerSavingMode(false);
+    expect(thermostat.isInPowerSavingMode).toEqual(false);
+  })
 
   describe('When not in power saving mode', function() {
 
@@ -88,6 +98,5 @@ describe('Thermostat', function() {
     });
 
   });
-
 
 });

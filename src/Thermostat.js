@@ -52,3 +52,11 @@ Thermostat.prototype.currentEnergyUsage = function() {
     return "high-usage";
   }
 }
+
+Thermostat.prototype.changeTemperature = function(temp) {
+  this.temperature = temp
+}
+
+Thermostat.prototype.changePowerSavingMode = function(psm) {
+  this.isInPowerSavingMode = psm
+}
